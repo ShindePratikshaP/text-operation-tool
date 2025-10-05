@@ -7,25 +7,31 @@
     <style>
         .container{
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 20px;
+            margin: 20px auto;
+            width: 50%;
         }
 
         .btn{
-            padding: 2px 10px;
+            padding: 9px 10px;
             border: none;
             border-radius: 5px;
-            background-color: aqua;
+            background-color: rgb(3, 51, 51);
             font-size: 16px;
             color: white;
-            width: 120px;
+            width: 150px;
             cursor: pointer;
+            margin: 0px 30px;
 
         }
+        .result{
+            width: 50%;
+            margin: 20px auto; 
+        }
         #inputText{
-            width: 90%;
+            width: 50%;
             padding: 10px;
             font-size: 16px;
             display: block;
@@ -35,7 +41,7 @@
 </head>
 <body>
     <input type="text" id="inputText" placeholder="Enter Text Here"/>
-    <p id="resultPara"> Result will be displayed here. </p>
+    <p id="resultPara" class="result"> Result will be displayed here. </p>
     <div class="container">
         <button id="uppercase" class="btn" onclick="upperCase()">Uppercase</button>
         <button id="lowercase" class="btn" onclick="lowerCase()">Lowercase</button>
