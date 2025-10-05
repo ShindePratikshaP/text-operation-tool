@@ -35,24 +35,32 @@
 </head>
 <body>
     <input type="text" id="inputText" placeholder="Enter Text Here"/>
+    <p id="resultPara"> Result will be displayed here. </p>
     <div class="container">
         <button id="uppercase" class="btn" onclick="upperCase()">Uppercase</button>
         <button id="lowercase" class="btn" onclick="lowerCase()">Lowercase</button>
         <button id="reverse" class="btn" onclick="reverse">Reverse</button>
-        <button id="length" class="btn" onclick="length()">Length</button>
+        <button id="length" class="btn" onclick="textLength()">Length</button>
         <button id="wordCount" class="btn" onclick="wordCount()">Word Count</button>
         <button id="Clear" class="btn" onclick="clearText()">Clear</button>               
     </div>
 
     <script>
         const inputElement = document.getElementById("inputText");
+        const result = document.getElementById("resultPara")
+
+
         const upperCase = () => {};
         const lowerCase = () => {};
         const reverse = () => {};
-        const length = () => {};
+        const textLength = () => {
+            result.innerText = `Length : ${inputElement.value.length}`;
+
+        };
         const wordCount = () => {};
         const clearText = () => {
             inputElement.value = "";
+            result.innerText = "Result will be displayed here";
         };
     </script>
 </body>
