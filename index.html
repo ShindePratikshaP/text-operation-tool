@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Operation</title>
     <style>
-        .contaioner{
+        .container{
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
@@ -39,7 +39,7 @@
     <div class="container">
         <button id="uppercase" class="btn" onclick="upperCase()">Uppercase</button>
         <button id="lowercase" class="btn" onclick="lowerCase()">Lowercase</button>
-        <button id="reverse" class="btn" onclick="reverse">Reverse</button>
+        <button id="reverse" class="btn" onclick="reverse()">Reverse</button>
         <button id="length" class="btn" onclick="textLength()">Length</button>
         <button id="wordCount" class="btn" onclick="wordCount()">Word Count</button>
         <button id="Clear" class="btn" onclick="clearText()">Clear</button>               
@@ -50,14 +50,23 @@
         const result = document.getElementById("resultPara")
 
 
-        const upperCase = () => {};
-        const lowerCase = () => {};
-        const reverse = () => {};
+        const upperCase = () => {
+            result.innerText = inputElement.value.toUpperCase();
+        };
+        const lowerCase = () => {
+            result.innerText = inputElement.value.toLowerCase();
+        };
+        const reverse = () => {
+            result.innerText = inputElement.value.split("").reverse().join("");
+        };
         const textLength = () => {
             result.innerText = `Length : ${inputElement.value.length}`;
 
         };
-        const wordCount = () => {};
+        const wordCount = () => {
+            const words = inputElement.value.split(" ");
+            result.innerText = `Word Count : ${words.length}`;
+        };
         const clearText = () => {
             inputElement.value = "";
             result.innerText = "Result will be displayed here";
