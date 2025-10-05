@@ -36,12 +36,24 @@
 <body>
     <input type="text" id="inputText" placeholder="Enter Text Here"/>
     <div class="container">
-        <button id="uppercase" class="btn">Uppercase</button>
-        <button id="lowerercase" class="btn">Lowercase</button>
-        <button id="reverse" class="btn">Reverse</button>
-        <button id="length" class="btn">Length</button>
-        <button id="wordCount" class="btn">Word Count</button>
-        <button id="Clear" class="btn">Clear</button>               
+        <button id="uppercase" class="btn" onclick="upperCase()">Uppercase</button>
+        <button id="lowercase" class="btn" onclick="lowerCase()">Lowercase</button>
+        <button id="reverse" class="btn" onclick="reverse">Reverse</button>
+        <button id="length" class="btn" onclick="length()">Length</button>
+        <button id="wordCount" class="btn" onclick="wordCount()">Word Count</button>
+        <button id="Clear" class="btn" onclick="clearText()">Clear</button>               
     </div>
+
+    <script>
+        const inputElement = document.getElementById("inputText");
+        const upperCase = () => {};
+        const lowerCase = () => {};
+        const reverse = () => {};
+        const length = () => {};
+        const wordCount = () => {};
+        const clearText = () => {
+            inputElement.value = "";
+        };
+    </script>
 </body>
 </html>
