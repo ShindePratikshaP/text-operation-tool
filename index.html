@@ -4,16 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text Operation</title>
+    <style>
+        .contaioner{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .btn{
+            padding: 2px 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: aqua;
+            font-size: 16px;
+            color: white;
+            width: 120px;
+            cursor: pointer;
+
+        }
+        #inputText{
+            width: 90%;
+            padding: 10px;
+            font-size: 16px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
 </head>
 <body>
     <input type="text" id="inputText" placeholder="Enter Text Here"/>
-    <div>
-        <button id="uppercase">Uppercase</button>
-        <button id="lowerercase">Lowercase</button>
-        <button id="reverse">Reverse</button>
-        <button id="length">Length</button>
-        <button id="wordCount">Word Count</button>
-        <button id="Clear">Clear</button>               
+    <div class="container">
+        <button id="uppercase" class="btn">Uppercase</button>
+        <button id="lowerercase" class="btn">Lowercase</button>
+        <button id="reverse" class="btn">Reverse</button>
+        <button id="length" class="btn">Length</button>
+        <button id="wordCount" class="btn">Word Count</button>
+        <button id="Clear" class="btn">Clear</button>               
     </div>
 </body>
 </html>
